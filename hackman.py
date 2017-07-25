@@ -12,9 +12,9 @@ for i in range(0,8):
 	if i == 8:
 		break
 	elif guess in hackman_word:
-		print('HUZZAH, good guess! keep going!')
+		print('HUZZAH, good guess! That\'s letter #' + str(hackman_word.index(guess)+1)+ ' Keep going!')
 	else:
-		print('guess again')
+		print('not in this word: guess again! You have '+ str(7 - i) +' guesses left.')
 # 2nd attempt
 # hackman_word = 'hellos'
 # until 
