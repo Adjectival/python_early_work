@@ -5,7 +5,7 @@
 # 4. Display the target word with guessed letters in their correct position, and unguessed letters as underscores
 # 5. Display all their incorrect guesses, as well as their remaining guesses
 
-hackman_word = ['g', 'u', 'e', 's', 's']
+hackman_word = ['q', 'u', 'e', 's', 't']
 hackman_display = ['_','_','_','_','_']
 
 for i in range(0,8):
@@ -15,7 +15,11 @@ for i in range(0,8):
 	elif guess in hackman_word:
 		print('HUZZAH, good guess! That\'s letter #' + str(hackman_word.index(guess)+1)+ ' Keep going!')
 		hackman_display[hackman_word.index(guess)]=guess
-		print(hackman_display)
+		if '_' not in hackman_display:
+			print('You are a Winner! You guessed it: '+str(hackman_display))
+			break
+		else:
+			print(hackman_display)
 	else:
 		print('not in this word: guess again! You have '+ str(7 - i) +' guesses left.')
 		print(hackman_display)
