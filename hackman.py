@@ -5,13 +5,13 @@
 # 4. Display the target word with guessed letters in their correct position, and unguessed letters as underscores
 # 5. Display all their incorrect guesses, as well as their remaining guesses
 
-hackman_word = ['q', 'u', 'e', 's', 't']
+hackman_word = ['d', 'u', 'v', 'e', 't']
 hackman_display = ['_','_','_','_','_']
 bad_guesses = []
 
-for i in range(0,8):
+for i in range(0,10):
 	guess = input('Guess a letter: ')
-	if i == 8:
+	if i == 10:
 		break
 	# correct guess
 	elif guess in hackman_word:
@@ -22,13 +22,13 @@ for i in range(0,8):
 			break
 		# game continues
 		else:
-			print('HUZZAH, good guess! That\'s letter #' + str(hackman_word.index(guess)+1)+ ' You have '+ str(7 - i) +' guesses left. Keep going!')
+			print('HUZZAH, good guess! That\'s letter #' + str(hackman_word.index(guess)+1)+ ' You have '+ str(9 - i) +' guesses left. Keep going!')
 		# writes in correct guess over underscore
 			print(hackman_display)
 	# incorrect guess
 	else:
 		bad_guesses.append(guess)
-		print('Not in this word: guess again! You have '+ str(7 - i) +' guesses left.')
+		print('Not in this word: guess again! You have '+ str(9 - i) +' guesses left.')
 		print('Bad guesses: '+ str(bad_guesses) + '\n Hackman word:' + str(hackman_display))
 
 
