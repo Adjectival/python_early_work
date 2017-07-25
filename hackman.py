@@ -12,16 +12,21 @@ for i in range(0,8):
 	guess = input('Guess a letter: ')
 	if i == 8:
 		break
+	# correct guess
 	elif guess in hackman_word:
-		print('HUZZAH, good guess! That\'s letter #' + str(hackman_word.index(guess)+1)+ ' Keep going!')
-		hackman_display[hackman_word.index(guess)]=guess
+		hackman_display[hackman_word.index(guess)] = guess
+		# when word fully revealed, end game
 		if '_' not in hackman_display:
 			print('You are a Winner! You guessed it: '+str(hackman_display))
 			break
+		# game continues
 		else:
+			print('HUZZAH, good guess! That\'s letter #' + str(hackman_word.index(guess)+1)+ ' You have '+ str(7 - i) +' guesses left. Keep going!')
+		# writes in correct guess over underscore
 			print(hackman_display)
+	# incorrect guess
 	else:
-		print('not in this word: guess again! You have '+ str(7 - i) +' guesses left.')
+		print('Not in this word: guess again! You have '+ str(7 - i) +' guesses left.')
 		print(hackman_display)
 
 
