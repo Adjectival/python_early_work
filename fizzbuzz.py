@@ -1,5 +1,5 @@
 def is_divisible(number, divisor):
-    	return number % divisor == 0
+    return number % divisor == 0
 
 def fizzbuzz_logic(num):
 	if is_divisible(num, 15):
