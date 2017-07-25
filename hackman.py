@@ -7,6 +7,7 @@
 
 hackman_word = ['q', 'u', 'e', 's', 't']
 hackman_display = ['_','_','_','_','_']
+bad_guesses = []
 
 for i in range(0,8):
 	guess = input('Guess a letter: ')
@@ -26,8 +27,9 @@ for i in range(0,8):
 			print(hackman_display)
 	# incorrect guess
 	else:
+		bad_guesses.append(guess)
 		print('Not in this word: guess again! You have '+ str(7 - i) +' guesses left.')
-		print(hackman_display)
+		print('Bad guesses: '+ str(bad_guesses) + '\n Hackman word:' + str(hackman_display))
 
 
 
