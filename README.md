@@ -22,6 +22,7 @@ print(user_words)
 ## input_checker.py
 ### something simple, a bucket that prints a happy message if user input is in a list
 ### whipped this up in order to discover the python script to fulfill a major Hangman game mechanic
+#### turned out that the index() method reports back the position of the list item, that's super handy & re-used
 ```python
 hackman_word = ['t', 'r', 'i', 'a', 'l']
 inputted_guess = input('Guess a letter in the mystery word: ')
@@ -32,7 +33,7 @@ if inputted_guess in hackman_word:
 
 ## last in our hearts and in this list, fizzbuzz! in order to build a basic classifier based on a few conditions
 ### this code was then (did you see it coming?) tweaked into the Game Over logic for Hangman
-#### the buried input() as param was actually built out in the input_checker above, first, then re-used here
+#### the buried input('?') as param was actually first built out somewhere else, but I captured it here for re-use
 ```python
 #fizzbuzz
 def is_divisible(number, divisor):
