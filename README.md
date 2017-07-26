@@ -1,5 +1,5 @@
 # python_early_work
-##foundational Py3 scripts and codelets
+## foundational Py3 scripts and codelets
 ### Alexander Jacks : Adjectival
 
 > 3rd week of Hack University, July 2017: Portland, Oregon
@@ -58,6 +58,10 @@ fizzbuzz()
 ```
 
 ## OKay, finally, the Hangman game built at Hack University by yours truly, late July 2017
+### the display of underscores was not built after everything else... it is the game counter!
+### see how the fizzbuzz became the game over logic?
+#### still does not allow for words with duplicate letters :[
+
 ```python
 hackman_word = ['d', 'u', 'v', 'e', 't']
 hackman_display = ['_','_','_','_','_']
@@ -69,6 +73,7 @@ for i in range(0,10):
 		break
 	# correct guess
 	elif guess in hackman_word:
+		# will write input over the proper '_'
 		hackman_display[hackman_word.index(guess)] = guess
 		# when word fully revealed, end game
 		if '_' not in hackman_display:
@@ -76,8 +81,7 @@ for i in range(0,10):
 			break
 		# game continues
 		else:
-			print('HUZZAH, good guess! That\'s letter #' + str(hackman_word.index(guess)+1)+ ' You have '+ str(9 - i) +' guesses left. Keep going!')
-		# writes in correct guess over underscore
+			print('HUZZAH, good guess! That\'s letter #' + str(hackman_word.index(guess)+1)+ ' You have '+ str(9 - i) +' guesses left. Keep going!') 
 			print(hackman_display)
 	# incorrect guess
 	else:
